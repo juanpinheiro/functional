@@ -6,11 +6,20 @@
   "license": "MIT",
   "scripts": {
     "start": "tsc-watch --onSuccess \"node dist/index.js\"",
-    "build": "tsc"
+    "build": "tsc",
+    "test": "mocha -r ts-node/register src/**/*.spec.ts"
   },
   "devDependencies": {
+    "@types/chai": "^4.1.2",
+    "@types/mocha": "^2.2.48",
     "@types/node": "^9.4.6",
-    "typescript": "^2.7.2",
-    "tsc-watch": "^1.0.16"
+    "chai": "^4.1.2",
+    "eslint": "^4.18.2",
+    "mocha": "^5.0.4",
+    "ts-node": "^5.0.1",
+    "tsc-watch": "^1.0.16",
+    "tslint": "^5.9.1",
+    "tslint-eslint-rules": "^5.1.0",
+    "typescript": "^2.7.2"
   }
 }
