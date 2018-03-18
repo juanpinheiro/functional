@@ -1,21 +1,11 @@
-export const increase = (x: number) => x + 1;
+import { last, first, reverse } from './examples/basic';
 
-export const head = ([x]: Array<any>) => x;
+console.log('-RECURSIVE PLAYGROUND');
+console.log('--REVERSE');
+reverse([1, 2, 3, 4, 5]);
 
-export const tail = ([, ...x]: Array<any>) => x;
+console.log('--FIRST');
+first([1, 2, 3, 4, 5], 2);
 
-export const def = (x: any) => (
-  typeof x !== 'undefined'
-);
-
-export const reverse = ([x, ...y]: Array<any>) => (
-  def(x) ? [...reverse(y), x] : []
-);
-
-export const first = ([x, ...xs]: Array<any>, n: number = 1) => (
-  def(x) && n ? [x, ...first(xs, n - 1)] : []
-);
-
-export const last = (xs: Array<any>, n: number = 1) => (
-  reverse(first(reverse(xs), n))
-);
+console.log('--LAST');
+last([1, 2, 3, 4, 5, 2]);

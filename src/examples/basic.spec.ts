@@ -6,7 +6,7 @@ import {
   reverse,
   first,
   last
-} from './index';
+} from './basic';
 import {
   expect
 } from 'chai';
@@ -49,6 +49,13 @@ describe('Basic Functional Functions', () => {
   it('Get the first "n" elements of an array', () => {
     const result: Array<number> = first([1, 2, 3, 4, 5], 2);
     const array: Array<number> = [1, 2];
+
+    expect(result).to.deep.equal(array);
+  });
+
+  it('Get the last "n" elements of an array', () => {
+    const result: Array<number> = last([1, 2, 3, 4, 5], 2);
+    const array: Array<number> = [4, 5];
 
     expect(result).to.deep.equal(array);
   });
